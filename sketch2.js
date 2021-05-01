@@ -1,21 +1,39 @@
 let feels = [{
   name: "happy",
-  color: "yellow"
+  color: "yellow",
+  red: 255,
+  green: 251,
+  blue: 0
 }, {
   name: "sad",
-  color: "blue"
+  color: "blue",
+  red: 0,
+  green: 255,
+  blue: 251
 }, {
   name: "melancholey",
-  color:"green"
+  color:"green",
+  red: 59,
+  green: 522,
+  blue: 38
 }, {
   name: "surprise",
-  color:"orange"
+  color:"orange",
+  red: 255,
+  green: 156,
+  blue: 43
 }, {
   name: "angry",
-  color:"red"
+  color:"red",
+  red: 191,
+  green: 0,
+  blue: 0
 }, {
-  name: "loney",
-  color:"black"
+  name: "lonely",
+  color:"gray",
+  red: 148,
+  green: 148,
+  blue: 148
 }];
 
 let randomIndex;
@@ -24,48 +42,48 @@ let counter = 0;
 
 function setup() {
   createCanvas(600, 600);
-  background(20);
+  background(85, 250, 209);
   textSize(32);
-
   text("click to find your emotion", 50, 50);
-
 }
 
 function draw() {
-
  if(animating == true){
-   square(random(width), random(height), random(0, 150), random(0, 50));
+   console.log('randomIndex ' + randomIndex);
+   if(randomIndex === undefined) {
+     randomIndex = 0;
+   }
+   console.log('feels.length ' + feels.length);
+   if(feels.length > 0) {
+
+     fill(feels[randomIndex].red, feels[randomIndex].green,
+       feels[randomIndex].blue);
+ stroke(0);
+ strokeWeight(3);
+     text(`${feels[randomIndex].name}'s color is ${feels[randomIndex].color}`, 50, 50);
+
+   } else {
+     fill(0,0,0);
+   }
+noStroke();
+  square(random(width), random(height), random(0, 150), random(0, 50));
  }
 }
 
 function randomizer() {
   animating = false;
-  if (feels[0]) {
-    //this displays random name and splices it out of array
-    background(random(feels.length));
+  if (feels.length > 0){
+    randomIndex = int(random(feels.length-1));
+    //delete an item from the array
     feels.splice(randomIndex, 1);
   } else {
-    background(random(1, 255));
-    text("none left to feel", 50, 50);
-  }
-}
-function randomizer() {
-  animating = false;
-  if (feels[0]){
-      background(random(200, 255));
-      randomIndex = int(random(feels.length));
-      text(`${feels[randomIndex].name}'s color is ${feels[randomIndex].color}`, 50, 50);
-      feels.splice(randomIndex, 1);
-  } else {
-      background(random(200, 255));
-      text("no emotion!", 50, 50);
+    background(random(200, 255));
+    text("no emotion!", 50, 50);
   }
 }
 
 function mousePressed() {
   animating = true;
+  background(0,0,0);
   setTimeout(randomizer, 2000);
-
-
-
 }
