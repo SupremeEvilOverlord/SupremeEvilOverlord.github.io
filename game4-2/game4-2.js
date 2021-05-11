@@ -57,7 +57,7 @@ function draw() {
 
 //ears
 
-   triangle(125, pose.rightEar.y, 125, 25, pose.rightEar.x, pose.rightEar.y);
+ //  triangle(125, pose.rightEar.y, 125, 25, pose.rightEar.x, pose.rightEar.y);
 
 //wrists
     fill(0, 0, 255);
