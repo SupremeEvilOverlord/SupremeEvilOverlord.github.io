@@ -87,6 +87,10 @@ function title() {
   textSize(30);
   text('Click to start', w/2, h/2);
 }
+  textSize(20);
+  text('Game Functions:', w/3, h/3); 
+  text('left & right arrows to move', w/2, h/4);
+  text('SpaceBar to shoot (in level 2)', w/2, h/5); 
 
 function titleMousedClicked() {
     console.log('canvas is clicked on title page');
