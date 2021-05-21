@@ -86,10 +86,11 @@ function title() {
   text('Squeaky’s Revenge:', w/2, h/5);
   textSize(30);
   text('Click to start', w/2, h/2);
-   textSize(20);
-  text('Game Functions:', w/3, h/3); 
-  text('left & right arrows to move', w/2, h/4);
-  text('SpaceBar to shoot (in level 2)', w/2, h/5); 
+  textSize(20);
+  textAlign(CENTER);
+  text('Game Functions:', w/2, h/1.3);
+  text('left & right arrows to move', w/2, h/1.2);
+  text('SpaceBar to shoot (in level 2)', w/2, h/1.1);
 
 }
 function titleMousedClicked() {
