@@ -83,7 +83,7 @@ function title() {
   fill(255);
   textAlign(CENTER);
   textSize(50);
-  text('Ghost vs Monsters', w/2, h/5);
+  text('Squeaky’s Revenge:', w/2, h/5);
   textSize(30);
   text('Click to start', w/2, h/2);
 }
@@ -94,7 +94,7 @@ function titleMousedClicked() {
 }
 
 function level1() {
-  background(0, 13, 245);
+  background(0, 224, 97);
 
   if (random(1) <= 0.04) {
     coins.push(new Coin());
@@ -166,7 +166,7 @@ function level1MouseClicked() {
 
 function level2() {
     // text('click for points', w/2, h-30);
-    background(145, 242, 171);
+    background(0, 224, 97);
 
     if (random(1) <= 0.06) {
       enemies.push(new Enemies());
@@ -236,12 +236,12 @@ function level2MouseClicked() {
 }
 
 function youWin() {
-  background(214, 151, 252);
+  background(181, 0, 222);
   textSize(80);
   stroke(255);
   text('YOU WIN', w/2, h/2);
   textSize(30);
-  text('click anywhere to restart/continue', w / 2, h * 3 / 4);
+  text('Click Anywhere To Continue', w / 2, h * 3 / 4);
 }
 
 function youWinMouseClicked() {
@@ -257,7 +257,7 @@ function youWinMouseClicked() {
 }
 
 function gameOver() {
-  background(214, 151, 252);
+  background(173, 0, 98);
   textSize(80);
 
   //check of #lives
@@ -270,7 +270,7 @@ function gameOver() {
   } else {
     // game Over
     text('Game Over Sucker', w / 2, h / 2);
-    textSize(30);
+    textSize(25);
     text('click anywhere to restart', w / 2, h * 3 / 4);
   }
 }
