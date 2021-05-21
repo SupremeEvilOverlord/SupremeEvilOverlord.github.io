@@ -1,6 +1,6 @@
 'use strict';
 
-let pointsToWin = 2;
+let pointsToWin = 10;
 let state = 'title';
 let cnv;
 let points = 0;
@@ -152,7 +152,7 @@ function level1() {
   // checkpoint values to win or lose hehe dork
   if (points >= pointsToWin){
    state = 'you win';
-  } else if (points <= -3) {
+  } else if (points <= -10) {
    state = 'game over';
   }
 }
