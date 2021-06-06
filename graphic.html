@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<title>homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="photogallerytrash.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav>
+  <!-- Avatar image in top left corner -->
+ <ul>
+  <li><a class="active" href="homepage.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="artwork.html">Artwork</a></li>
+  <li><a href="blog.html">Blog</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+
+<div class="header">
+  <h1>Graphics</h1>
+  <p>Diffrent graphics I have done using illustrator, photoshop, dimensions, and canva.</p>
+</div>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="graphic-images/ballerina.png
+" style="width:35%">
+  </div>
+
+ <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="graphic-images/saraburn.poster.png" style="width:35%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="graphic-images/tearyeyes.png" style="width:35%">
+  </div>
+
+   <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="graphic-images/fruitger.png" style="width:35%">
+  </div>
+
+   <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="graphic-images/typester-sac.png" style="width:35%">
+  </div>
+
+   <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="graphic-images/deconstruttype.png" style="width:35%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="graphic-images/ballerina.png" style="width:100%" onclick="currentSlide(1)" alt="The Ballerina">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="graphic-images/saraburn.poster.png" style="width:100%" onclick="currentSlide(2)" alt="Saraburn">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="graphic-images/tearyeyes.png" style="width:100%" onclick="currentSlide(3)" alt="Teary Eyes">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="graphic-images/fruitger.png" style="width:100%" onclick="currentSlide(4)" alt="Frutiger">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="graphic-images/typester-sac.png" style="width:100%" onclick="currentSlide(5)" alt="Typester Sacramento">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="graphic-images/deconstruttype.png" style="width:100%" onclick="currentSlide(6)" alt="Deconstruct Type">
+    </div>
+
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
+  <a href="https://www.facebook.com/alexis.lienhard/" class="fa fa-facebook"></a>
+<a href="https://twitter.com/animanica" class="fa fa-twitter"></a>
+<a href="https://www.linkedin.com/in/alexis-lienhard-0555ab1a1/" class="fa fa-linkedin"></a>
+<a href="https://www.youtube.com/channel/UC8em0XeOqwCAVFUS06kEmlg" class="fa fa-youtube"></a>
+<a href="https://www.instagram.com/amani.comy/?hl=en" class="fa fa-instagram"></a>
+</div>
+</html>
