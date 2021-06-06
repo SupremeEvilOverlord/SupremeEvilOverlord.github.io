@@ -1,4 +1,0 @@
-# randomizer
-netart
-
-index.html
